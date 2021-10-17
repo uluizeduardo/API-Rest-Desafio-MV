@@ -89,4 +89,12 @@ public class GreetingsController {
 		Usuario usuario = usuarioRepository.findById(idUser).get();
 		return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
 	}
+	
+	//Método para buscar usuários por parte do nome
+	@GetMapping(value = "buscarPorNome")
+	@ResponseBody
+	public ResponseEntity<List<Usuario>> buscaruserid(@RequestParam(name = "nome") String nome){
+		List<Usuario> usuarios = usuarioRepository.buscarPorNome(nome.trim().toUpperCase());
+		return new ResponseEntity<List<Usuario>>(usuarios, HttpStatus.OK);
+	}
 }
