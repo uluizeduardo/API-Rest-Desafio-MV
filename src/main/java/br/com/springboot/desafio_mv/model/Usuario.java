@@ -9,10 +9,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Usuario implements Serializable{
+public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private int cpf;
 	private String nome;
