@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,11 +46,16 @@ public class GreetingsController {
 	// Método para listar todos os usuários do banco de dados
 	@GetMapping(value = "/listartodos")
 	@ResponseBody // Retorna dados para o corpo da resposta
-	public ResponseEntity<List<Usuario>> listarUsuarios() {	
-
+	public ResponseEntity<List<Usuario>> listarUsuarios() {
 		List<Usuario> usuarios = usuarioRepository.findAll(); // Execulta a consulta no banco de dados
-
 		return new ResponseEntity<List<Usuario>>(usuarios, HttpStatus.OK); // Retorna a lista em JSON
 	}
 
+	// Método para salvar usuários no banco de dados
+	@PostMapping(value = "/salvar")
+	@ResponseBody
+	public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
+		Usuario user = usuarioRepository.save(usuario);
+		return new ResponseEntity<Usuario>(user, HttpStatus.ACCEPTED);
+	}
 }
