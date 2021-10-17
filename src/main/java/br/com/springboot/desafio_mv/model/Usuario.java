@@ -31,6 +31,15 @@ public class Usuario implements Serializable {
 	private String cpf;
 	
 	private String nome;
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getCpf() {
 		return cpf;
