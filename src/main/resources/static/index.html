@@ -11,78 +11,79 @@
 	<body>
 		<h2>Teste do html</h2>
 		
-		<div class="mb-3">
-	  		<label for="exampleFormControlInput1" class="form-label">Nome</label>
-	 		<input type="email" class="form-control" id="nome" placeholder="name@example.com">
-		</div>
-		<div class="mb-3">
-	  		<label for="exampleFormControlInput1" class="form-label">CPF</label>
-	 		<input type="email" class="form-control" id="cpf" placeholder="name@example.com">
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-		  <label class="form-check-label" for="flexCheckDefault">
-		    pao
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-		  <label class="form-check-label" for="flexCheckDefault">
-		    queijo
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-		  <label class="form-check-label" for="flexCheckDefault">
-		    presunto
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-		  <label class="form-check-label" for="flexCheckDefault">
-		    leite
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-		  <label class="form-check-label" for="flexCheckDefault">
-		    cafe
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-		  <label class="form-check-label" for="flexCheckDefault">
-		    cuscuz
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-		  <label class="form-check-label" for="flexCheckDefault">
-		    achocolatado
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-		  <label class="form-check-label" for="flexCheckDefault">
-		    bolo
-		  </label>
-		</div>
+		<form action="" id="formCadastroUser">
+			<div class="mb-3">
+		  		<label for="exampleFormControlInput1" class="form-label">Nome</label>
+		 		<input type="email" class="form-control" id="nome" placeholder="name@example.com">
+			</div>
+			<div class="mb-3">
+		  		<label for="exampleFormControlInput1" class="form-label">CPF</label>
+		 		<input type="email" class="form-control" id="cpf" placeholder="name@example.com">
+			</div>
 			<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-		  <label class="form-check-label" for="flexCheckDefault">
-		    iorgute
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-		  <label class="form-check-label" for="flexCheckDefault">
-		    suco
-		  </label>
-		</div>
-		
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			  <label class="form-check-label" for="flexCheckDefault">
+			    pao
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+			  <label class="form-check-label" for="flexCheckDefault">
+			    queijo
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			  <label class="form-check-label" for="flexCheckDefault">
+			    presunto
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+			  <label class="form-check-label" for="flexCheckDefault">
+			    leite
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			  <label class="form-check-label" for="flexCheckDefault">
+			    cafe
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+			  <label class="form-check-label" for="flexCheckDefault">
+			    cuscuz
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			  <label class="form-check-label" for="flexCheckDefault">
+			    achocolatado
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+			  <label class="form-check-label" for="flexCheckDefault">
+			    bolo
+			  </label>
+			</div>
+				<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			  <label class="form-check-label" for="flexCheckDefault">
+			    iorgute
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+			  <label class="form-check-label" for="flexCheckDefault">
+			    suco
+			  </label>
+			</div>
+		</form>
 		<br>
 		
-		<button type="button" class="btn btn-primary">Novo</button>
+		<button type="button" class="btn btn-primary" onclick="document.getElementById('formCadastroUser').reset();">Novo</button>
 		<button type="button" class="btn btn-success" onclick="salvarUsuario()">Salvar</button>
 		<button type="button" class="btn btn-danger">Deletar</button>
 		<button type="button" class="btn btn-warning">Ver lista</button>
@@ -99,8 +100,20 @@
 				var nome = $("#nome").val();
 				var cpf = $("#cpf").val();
 
-				alert(nome + " --- " + cpf);
+				$.ajax({
+					method: "POST",
+					url: "salvar",
+					data: JSON.stringify({nome: nome, cpf: cpf}),
+					contentType: "application/json; charset=utf-8",
+					success: function (response){
+						$("#id").val(response.id);
+						alert("Gravou com sucesso!");
+					} 
+				}).fail(function (xhr, status, errorThrown){
+					alert("Error ao salvar usuário: " + xhr.responseText);
+				});
 			}
+
 		</script>
 	</body>
 </html>
