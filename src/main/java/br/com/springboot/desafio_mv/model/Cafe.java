@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 
@@ -15,6 +17,8 @@ public class Cafe implements Serializable {
 
 	@Id
 	private Long id;
+	@ManyToOne
+	private Usuario usuario;
 	private String pao;
 	private String queijo;
 	private String presunto;

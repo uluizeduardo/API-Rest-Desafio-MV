@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 import lombok.Data;
@@ -32,6 +34,8 @@ public class Usuario implements Serializable {
 	
 	private String nome;
 	
+	@ManyToOne
+	private Cafe cafe;
 
 	public Long getId() {
 		return id;
@@ -56,7 +60,13 @@ public class Usuario implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
+
+	public Cafe getCafe() {
+		return cafe;
+	}
+
+	public void setCafe(Cafe cafe) {
+		this.cafe = cafe;
+	}
 
 }
